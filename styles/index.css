@@ -1,0 +1,25 @@
+body { 
+    margin: 0 auto;
+    background: #ffffff url("../images/background.jpg") no-repeat fixed top;
+}
+.postActionWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 13%;
+    height: auto;
+    margin-top: 15%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.postActionWrapper > button {
+    background: #FFD333;
+    color: #000000;
+    border: none;
+    padding: 5px 15px 5px 15px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
