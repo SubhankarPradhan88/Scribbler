@@ -26,11 +26,53 @@ header {
 .userDetailBtn {
     background-color: #4733FF;
     border: none;
-    color: white;
+    color: #ffffff;
     margin-top: 5px;
     padding: 5px 15px 5px 15px;
     font-size: 14px;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
+}
+.formActionBtn {
+    width: 100%;
+    background-color: #4CAF50;
+    border: none;
+    color: #ffffff;
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+.userFormContent {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+.footerSubText {
+    font-weight: bold;
+    padding-right: 25%;
+    text-decoration: none;
+}
+.footerSubText > a {
+    text-decoration: none;
+}
+.modal {
+    color: #000000;
+}
+input[name="name"], input[name="userName"], input[name="userPassword"], input[name="confirmPassword"], 
+input[name="signInName"], input[name="signInPassword"] {
+    background: #eeeeee;
 }

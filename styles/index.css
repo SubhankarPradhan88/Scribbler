@@ -23,3 +23,17 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
+.createPostBtn {
+    width: 12%;
+    background: #4CAF50;
+    color: #ffffff;
+    border: none;
+    padding: 5px 15px 5px 15px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+input[name="createPostTitle"], textarea[name="createPostComment"] {
+    background: #eeeeee;
+}
