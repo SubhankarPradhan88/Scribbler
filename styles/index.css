@@ -24,7 +24,7 @@ body {
     cursor: pointer;
 }
 .createPostBtn {
-    width: 12%;
+    width: 20%;
     background: #4CAF50;
     color: #ffffff;
     border: none;
@@ -36,4 +36,8 @@ body {
 }
 input[name="createPostTitle"], textarea[name="createPostComment"] {
     background: #eeeeee;
+}
+.createPostfooter {
+    width: 100%;
+    padding-left: 45%;
 }

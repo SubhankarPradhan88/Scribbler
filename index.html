@@ -88,7 +88,7 @@
                                 <input type="password" class="form-control" name="signInPassword" id="signInPassword" placeholder="Enter your Password" aria-required="true" required>
                             </div>
                         </div>
-                        <div class="mb-1 modal-footer">
+                        <div class="modal-footer">
                             <button class="formActionBtn" id="signInAction">Sign In</button>
                             <p class="footerSubText">Not a member? <a href="#" onclick="signUpModal(event)">Sign Up</a></p>
                         </div>
@@ -110,12 +110,12 @@
                                 <label for="createPostTitle" class="form-label">Title</label>
                                 <input type="text" class="form-control" name="createPostTitle" id="createPostTitle" placeholder="Enter title of your post">
                             </div>
-                            <div class="mb-1">
+                            <div>
                                 <label for="createPostComment" class="form-label">Contents</label>
                                 <textarea class="form-control" name="createPostComment" placeholder="Enter the contents of your post" id="createPostComment" rows="10"></textarea>
                             </div>
                         </div>
-                        <div class="mb-1 modal-footer">
+                        <div class="mb-3 createPostfooter">
                             <button class="createPostBtn" id="createPost" onclick="return false">Create</button>
                         </div>
                     </form>
