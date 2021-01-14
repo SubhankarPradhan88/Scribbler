@@ -1,8 +1,21 @@
 header {
     margin: 0 auto;
-    background: transparent;
-    width: 60%;
     height: 5%;
+}
+.width-60 {
+    width: 60%;
+}
+.width-64 {
+    width: 64%;
+}
+.margin-right-10px {
+    margin-right: 10px;
+}
+.cursorPointer {
+    cursor: pointer;
+}
+.homeTheme {
+    background: transparent;
 }
 .headerContainer {
     width: 100%;
@@ -11,6 +24,7 @@ header {
     justify-content: space-between;
 }
 .logoWrapper {
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -21,7 +35,9 @@ header {
 }
 .logoSubText {
     color: #000000;
-    font: 12px 'Ubuntu Mono', normal;
+    font-size: 14px;
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: bold;
 }
 .userDetailBtn {
     background-color: #4733FF;
