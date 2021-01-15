@@ -1,0 +1,35 @@
+.postContainer {
+    margin: 1% auto;
+    width: 60%;
+}
+.textAlignCenter {
+    text-align: center;
+}
+.postContainer > div:nth-child(2) {
+    text-align: left;
+    color: #000000;
+    font-size: 17px;
+    font-family: 'Ubuntu Mono', monospace;
+    margin-bottom: 1%;
+}
+.postBtnStyle {
+    width: 10%;
+    background: #FF3349;
+    color: #ffffff;
+    border: none;
+    font-family: 'Abel', sans-serif;
+    /* margin: 10px 0 10px 0; */
+    padding: 5px 10px 5px 10px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+.editActionWrapper {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
