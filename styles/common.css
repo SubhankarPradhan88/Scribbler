@@ -101,7 +101,9 @@ button:focus{
 }
 .footerSubText {
     font-weight: bold;
-    padding: 2% 25% 0 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2%;
     text-decoration: none;
 }
 .footerSubText > a {
