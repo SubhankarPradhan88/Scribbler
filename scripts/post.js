@@ -90,13 +90,13 @@ function loadAllPosts() {
             </div>
             <div class="editActionWrapper" id="editPostSection_${postsMasterArray[i].id}">
                 <div>${postsMasterArray[i].author}</div>
-                <button class="postBtnStyle" id="editPost_${postsMasterArray[i].id}" onclick="handleEditEvent(${postsMasterArray[i].id})">
+                <button class="postBtnWidth postBtnStyle" id="editPost_${postsMasterArray[i].id}" onclick="handleEditEvent(${postsMasterArray[i].id})">
                     <span id="editText_${postsMasterArray[i].id}">Edit</span> &nbsp; <span id="editIcon_${postsMasterArray[i].id}"><i class="fa fa-edit"></i></span>
                 </button>
             </div>
-            <div id="postDesc_${postsMasterArray[i].id}">${postsMasterArray[i].post}</div>
+            <div class="fontSizeMedium" id="postDesc_${postsMasterArray[i].id}">${postsMasterArray[i].post}</div>
             <div>
-                <button class="postBtnStyle btnAlignment" id="post_${postsMasterArray[i].id}" onclick="handleLikeEvent(${postsMasterArray[i].id}, ${1})">
+                <button class="postBtnWidth postBtnStyle btnAlignment" id="post_${postsMasterArray[i].id}" onclick="handleLikeEvent(${postsMasterArray[i].id}, ${1})">
                     <i class="fa fa-thumbs-up"></i> <span id="likeText_${postsMasterArray[i].id}">Like</span>
                 </button>
                 <p class="likeTextStyle" id="likeCount_${postsMasterArray[i].id}">Be the first one to like this!</p>
@@ -105,7 +105,7 @@ function loadAllPosts() {
                 <textarea name="userComment" id="userComment_${postsMasterArray[i].id}" placeholder="Leave a comment..." rows="5"></textarea>
             </div>
             <div>
-                <button class="postBtnStyle btnAlignment" onclick="addComment(userComment_${postsMasterArray[i].id}, ${postsMasterArray[i].id})">Comment</button>
+                <button class="postBtnWidth postBtnStyle btnAlignment" onclick="addComment(userComment_${postsMasterArray[i].id}, ${postsMasterArray[i].id})">Comment</button>
             </div>
             <p><h6>All Comments</h6></p>
             <div id="commentsSection_${postsMasterArray[i].id}" class="commentsWrapper"></div>

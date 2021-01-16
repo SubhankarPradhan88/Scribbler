@@ -2,11 +2,13 @@ body {
     margin: 0 auto;
     background: #ffffff url("../images/background.jpg") no-repeat fixed top;
 }
+.postWrapperWidth {
+    width: 13%;
+}
 .postActionWrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 13%;
     height: auto;
     margin-top: 15%;
     margin-left: auto;
@@ -42,4 +44,14 @@ input[name="createPostTitle"], textarea[name="createPostComment"] {
 .createPostfooter {
     width: 100%;
     padding-left: 45%;
+}
+@media only screen and (max-width: 1024px) {
+    .postWrapperWidth {
+        width: 20%;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .postWrapperWidth {
+        width: 60%;
+    }
 }

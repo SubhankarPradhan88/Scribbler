@@ -15,8 +15,10 @@
 .btnAlignment {
     margin: 10px 0 5px 0;
 }
-.postBtnStyle {
+.postBtnWidth {
     width: 10%;
+}
+.postBtnStyle {
     background: #FF3349;
     color: #ffffff;
     border: none;
@@ -60,4 +62,15 @@ textarea[name="userComment"] {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     color: #686868;
+}
+@media only screen and (max-width: 1024px) {
+    .postBtnWidth {
+        width: 14%;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .fontSizeMedium {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }
 }

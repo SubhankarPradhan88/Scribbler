@@ -23,6 +23,12 @@ button:focus{
 .margin-right-10px {
     margin-right: 10px;
 }
+.modalPaddingTop {
+    padding-top: 3%;
+}
+.signInModalPadding {
+    padding-top: 10%;
+}
 .formFieldBottom {
     margin-bottom: 3%;
 }
@@ -119,6 +125,10 @@ button:focus{
     align-items: center;
     justify-content: space-between;
     color: #707070;
+}
+.modalPosition {
+    display: flex;
+    align-items: center;
 }
 .modal {
     color: #000000;
