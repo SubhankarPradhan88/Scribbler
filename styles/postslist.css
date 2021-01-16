@@ -75,3 +75,49 @@
     flex-wrap: nowrap;
     justify-content: space-between;
 }
+.delActionWrapper {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.delYesBtnBgColor {
+    background: #4CAF50;
+}
+.cancelBtnBgColor {
+    background: #E5182A;
+}
+.delActionBtn {
+    width: 22%;
+    border: none;
+    color: #ffffff;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Remove post Modal (background) */
+.removePostmodal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 15%; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+  }
+  .removeModalAction {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 28%;
+    height: auto;
+  }

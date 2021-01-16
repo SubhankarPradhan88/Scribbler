@@ -1,3 +1,26 @@
+
+let removePostmodal = document.getElementById("delPostConfirm");
+let selectedPost = '';
+function removePostModal(flag) {
+    selectedPost = flag;
+    document.getElementById("delPostConfirm").style.display = "block";  // Click event to open the delete post modal
+}
+document.getElementById('delPost').addEventListener('click', function() {
+    removePostHandler(selectedPost);
+    document.getElementById("delPostConfirm").style.display = "none";
+});
+document.getElementById('cancelDel').addEventListener('click', function() {
+    selectedPost = '';
+    document.getElementById("delPostConfirm").style.display = "none";
+});
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == removePostmodal) {
+    document.getElementById("delPostConfirm").style.display = "none";
+  }
+}
+
 // Function to remove selected post from the postslist
 function removePostHandler(flag) {
     if(flag === 'firstPost') {
@@ -12,10 +35,7 @@ function removePostHandler(flag) {
         document.getElementById('fifthPost').style.display = 'none';
     }
 }
-// Route to the home screen
-function homeRouteHandler() {
-    window.location.href = '../index.html';
-}
+
 // Route to respective post's
 function postHandler(flag) {
     if(flag === 'firstPost') {

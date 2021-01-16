@@ -20,20 +20,87 @@
     </head>
     <body>
         <!-- TODO: Include code for header here -->
-        <header class="homeTheme width-60">
+        <header class="homeTheme width-64">
             <div class="headerContainer">
                 <div class="logoWrapper">
-                    <span class="logoText">Scribbler</span>
+                    <span class="logoText cursorPointer" onclick="homeRouteHandler()">Scribbler</span>
                     <span class="logoSubText">Explore, Imagine, Create</span>  
                 </div>
                 <div>
-                    <button id="signUpInModal" class="userDetailBtn" data-bs-toggle="modal" data-bs-target="#signUpForm">Sign Up</button>
+                    <button id="signUpInModal" class="userDetailBtn margin-right-10px" data-bs-toggle="modal" data-bs-target="#signUpForm">Sign Up</button>
                     <button id="signInModal" class="userDetailBtn" data-bs-toggle="modal" data-bs-target="#signInForm">Sign In</button>
                 </div>
             </div>  
         </header>
+
         <div id="postWrapper"></div>
+
+        <!--Modal starts -->
+        <!-- Sign Up Modal -->
+        <div class="modal fade" id="signUpForm" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="userFormContent">
+                    <div class="customModalHeader width-92">
+                        <h5 class="modal-title">Get Started</h5>
+                        <button type="button" id="closeSignUpModal" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form>
+                        <div class="modal-body">
+                            <div class="formFieldBottom">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name" aria-required="true" required>
+                            </div>
+                            <div class="formFieldBottom">
+                                <label for="userName" class="form-label">Username</label>
+                                <input type="text" class="form-control" name="userName" id="userName" placeholder="Enter your Username" aria-required="true" required>
+                            </div>
+                            <div class="formFieldBottom">
+                                <label for="userPassword" class="form-label">Password</label>
+                                <input type="password" class="form-control" name="userPassword" id="userPassword" placeholder="Enter your Password" aria-required="true" required>
+                            </div>
+                            <div>
+                                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" placeholder="Re-enter your password" aria-required="true" required>
+                            </div>
+                        </div>
+                        <div class="formFieldBottom customModalFooter">
+                            <button class="formActionBtn" id="signUpAction">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Sign In Modal -->
+        <div class="modal fade" id="signInForm" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="userFormContent">
+                    <div class="customModalHeader width-92">
+                        <h5 class="modal-title">Welcome back!</h5>
+                        <button type="button" id="closeSignInModal" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form>
+                        <div class="modal-body">
+                            <div class="formFieldBottom">
+                                <label for="signInName" class="form-label">Username</label>
+                                <input type="text" class="form-control" name="signInName" id="signInName" placeholder="Enter your Username" aria-required="true" required>
+                            </div>
+                            <div>
+                                <label for="signInPassword" class="form-label">Password</label>
+                                <input type="password" class="form-control" name="signInPassword" id="signInPassword" placeholder="Enter your Password" aria-required="true" required>
+                            </div>
+                        </div>
+                        <div class="customModalFooter">
+                            <button class="formActionBtn" id="signInAction">Sign In</button>
+                            <p class="footerSubText">Not a member? <a href="#" onclick="signUpModal(event)">Sign Up</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Modal ends --> 
+
         <!-- Java Script files -->
         <script src="../scripts/post.js"></script>
+        <script src="../scripts/common.js"></script>
     </body>
 </html>

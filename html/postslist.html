@@ -28,8 +28,8 @@
                     <span class="allPostsSubText">Explore, Imagine, Create</span>  
                 </div>
                 <div>
-                    <button class="userDetailBtn" data-bs-toggle="modal" data-bs-target="#signUpForm">Sign Up</button>
-                    <button class="userDetailBtn margin-right-10px" data-bs-toggle="modal" data-bs-target="#signInForm">Sign In</button>
+                    <button id="signUpInModal" class="userDetailBtn margin-right-10px" data-bs-toggle="modal" data-bs-target="#signUpForm">Sign Up</button>
+                    <button id="signInModal" class="userDetailBtn margin-right-10px" data-bs-toggle="modal" data-bs-target="#signInForm">Sign In</button>
                 </div>
             </div>  
         </header>
@@ -47,7 +47,7 @@
                     <div>
                         <div class="inline postTitleColor">
                             <p>‘let’ me be a ‘const’(ant), not a ‘var’(iable)!</p>
-                            <span class="cursorPointer" onclick="removePostHandler('firstPost')">
+                            <span class="cursorPointer" onclick="removePostModal('firstPost')">
                                 <!-- TODO: Include Font Awesome icon for delete icon here -->
                                 <i class="fa fa-trash"></i>
                             </span>
@@ -69,7 +69,7 @@
                     <div>
                         <div class="inline postTitleColor">
                             <p>What is linting and how can it save you time?</p>
-                            <span class="cursorPointer" onclick="removePostHandler('secondPost')">
+                            <span class="cursorPointer" onclick="removePostModal('secondPost')">
                                 <!-- TODO: Include Font Awesome icon for delete icon here -->
                                 <i class="fa fa-trash"></i>
                             </span>
@@ -91,7 +91,7 @@
                     <div>
                         <div class="inline postTitleColor">
                             <p>How to Get More Views on Your Tech Blog</p>
-                            <span class="cursorPointer" onclick="removePostHandler('thirdPost')">
+                            <span class="cursorPointer" onclick="removePostModal('thirdPost')">
                                 <!-- TODO: Include Font Awesome icon for delete icon here -->
                                 <i class="fa fa-trash"></i>
                             </span>
@@ -113,7 +113,7 @@
                     <div>
                         <div class="inline postTitleColor">
                             <p>How to write easily describable code</p>
-                            <span class="cursorPointer" onclick="removePostHandler('fourthPost')">
+                            <span class="cursorPointer" onclick="removePostModal('fourthPost')">
                                 <!-- TODO: Include Font Awesome icon for delete icon here -->
                                 <i class="fa fa-trash"></i>
                             </span>
@@ -135,7 +135,7 @@
                     <div>
                         <div class="inline postTitleColor">
                             <p>Everything you should know about ‘module’ & ‘require’ in Node.js</p>
-                            <span class="cursorPointer" onclick="removePostHandler('fifthPost')">
+                            <span class="cursorPointer" onclick="removePostModal('fifthPost')">
                                 <!-- TODO: Include Font Awesome icon for delete icon here -->
                                 <i class="fa fa-trash"></i>
                             </span>
@@ -154,34 +154,35 @@
         
         <!-- list of all posts ends here -->
 
+        <!--Modal starts-->
         <!-- Sign Up Modal -->
         <div class="modal fade" id="signUpForm" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="userFormContent">
-                    <div class="modal-header">
+                    <div class="customModalHeader width-92">
                         <h5 class="modal-title">Get Started</h5>
                         <button type="button" id="closeSignUpModal" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <form>
                         <div class="modal-body">
-                            <div class="mb-1">
+                            <div class="formFieldBottom">
                                 <label for="name" class="form-label">Name</label>
                                 <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name" aria-required="true" required>
                             </div>
-                            <div class="mb-1">
+                            <div class="formFieldBottom">
                                 <label for="userName" class="form-label">Username</label>
                                 <input type="text" class="form-control" name="userName" id="userName" placeholder="Enter your Username" aria-required="true" required>
                             </div>
-                            <div class="mb-1">
+                            <div class="formFieldBottom">
                                 <label for="userPassword" class="form-label">Password</label>
                                 <input type="password" class="form-control" name="userPassword" id="userPassword" placeholder="Enter your Password" aria-required="true" required>
                             </div>
-                            <div class="mb-1">
+                            <div>
                                 <label for="confirmPassword" class="form-label">Confirm Password</label>
                                 <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" placeholder="Re-enter your password" aria-required="true" required>
                             </div>
                         </div>
-                        <div class="mb-1 modal-footer">
+                        <div class="formFieldBottom customModalFooter">
                             <button class="formActionBtn" id="signUpAction">Sign Up</button>
                         </div>
                     </form>
@@ -192,22 +193,22 @@
         <div class="modal fade" id="signInForm" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="userFormContent">
-                    <div class="modal-header">
+                    <div class="customModalHeader width-92">
                         <h5 class="modal-title">Welcome back!</h5>
                         <button type="button" id="closeSignInModal" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <form>
                         <div class="modal-body">
-                            <div class="mb-1">
+                            <div class="formFieldBottom">
                                 <label for="signInName" class="form-label">Username</label>
                                 <input type="text" class="form-control" name="signInName" id="signInName" placeholder="Enter your Username" aria-required="true" required>
                             </div>
-                            <div class="mb-1">
+                            <div>
                                 <label for="signInPassword" class="form-label">Password</label>
                                 <input type="password" class="form-control" name="signInPassword" id="signInPassword" placeholder="Enter your Password" aria-required="true" required>
                             </div>
                         </div>
-                        <div class="modal-footer">
+                        <div class="customModalFooter">
                             <button class="formActionBtn" id="signInAction">Sign In</button>
                             <p class="footerSubText">Not a member? <a href="#" onclick="signUpModal(event)">Sign Up</a></p>
                         </div>
@@ -215,9 +216,23 @@
                 </div>
             </div>
         </div>
+
+        <!-- The Modal -->
+        <div id="delPostConfirm" class="removePostmodal">
+            <!-- Modal content -->
+            <div class="removeModalAction">
+                <h5>Are you sure you want to delete this post?</h5>
+                <div class="delActionWrapper">
+                    <button class="delActionBtn delYesBtnBgColor" id="delPost">Yes</button>
+                    <button class="delActionBtn cancelBtnBgColor" id="cancelDel">No</button>
+                </div>
+            </div>
+        </div>
         <!-- Modal ends --> 
+
         <!-- Java Script files -->
         <script src="../scripts/postslist.js"></script>
+        <script src="../scripts/common.js"></script>
     </body>
 
 </html>

@@ -2,23 +2,29 @@ header {
     margin: 0 auto;
     height: 5%;
 }
+*:focus {
+    outline: 0;
+}
+button:focus{
+    outline-style: none !important;
+}
 .width-60 {
     width: 60%;
 }
 .width-64 {
     width: 64%;
 }
-.padding-top-10px {
-    margin-right: 10px;
+.width-92 {
+    width: 92%;
+}
+.width-96 {
+    width: 96%;
 }
 .margin-right-10px {
     margin-right: 10px;
 }
-.padding-bottom-10px {
-    margin-right: 10px;
-}
-.margin-left-10px {
-    margin-right: 10px;
+.formFieldBottom {
+    margin-bottom: 3%;
 }
 .cursorPointer {
     cursor: pointer;
@@ -54,6 +60,7 @@ header {
     color: #ffffff;
     margin-top: 5px;
     padding: 5px 15px 5px 15px;
+    border: 1px #cccccc solid;
     font-size: 14px;
     text-align: center;
     text-decoration: none;
@@ -88,14 +95,34 @@ header {
 }
 .footerSubText {
     font-weight: bold;
-    padding-right: 25%;
+    padding: 2% 25% 0 0;
     text-decoration: none;
 }
 .footerSubText > a {
     text-decoration: none;
 }
+.customModalFooter {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: flex-end;
+    padding: .75rem;
+}
+.customModalHeader {
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 2px solid #cccccc;
+    padding: 15px 0px 10px 0px;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+    color: #707070;
+}
 .modal {
     color: #000000;
+    background-color: rgba(0,0,0,0.4);
 }
 input[name="name"], input[name="userName"], input[name="userPassword"], input[name="confirmPassword"], 
 input[name="signInName"], input[name="signInPassword"] {

@@ -22,3 +22,7 @@ document.getElementById('signInAction').addEventListener('click', function() {
         return false;
     }
 });
+// Route to the home screen
+function homeRouteHandler() {
+    window.location.href = '../index.html';
+}
