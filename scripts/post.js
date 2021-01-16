@@ -1,4 +1,4 @@
-// All Post's details
+// All post's details array
 const postsMasterArray = [
     {
         id: 1,
@@ -83,6 +83,7 @@ loadAllPosts();  // Invoke the function on page load
 // Function to fetch all the post's details and display
 function loadAllPosts() {
     for(let i = 0; i < postsMasterArray.length; i++) {
+        // Create template for the post's
         let postTemplate = `<div class="postContainer" id="postSection_${postsMasterArray[i].id}">
             <div class="textAlignCenter" id="postTitle_${postsMasterArray[i].id}">
                 <h5>${postsMasterArray[i].title}</h5>
@@ -110,29 +111,32 @@ function loadAllPosts() {
             <div id="commentsSection_${postsMasterArray[i].id}" class="commentsWrapper"></div>
             <hr/>
         </div>`
-        document.getElementById('postWrapper').innerHTML += postTemplate;
+        document.getElementById('postWrapper').innerHTML += postTemplate;  // Bind the post template to the 'div' container
     }
 }
 
 // Comment feature's common model / function, for all the posts
 let commentArray = [];
 function addComment(commentId, postNumber) {
-    if(!commentId.value) {
+    if(!commentId.value) {      // Base condition
         return;
     }
+    // Construct the post detail's object
     let obj = {};
     obj.commentId = postNumber;
     obj.comments = commentId.value;
-    document.getElementById('commentsSection_' + postNumber).innerHTML = '';
+    
+    document.getElementById('commentsSection_' + postNumber).innerHTML = '';                        // Clear the comment text once it is added / pushed to the array
     document.getElementById('commentsSection_' + postNumber).style.background = '#ffffff';
-    document.getElementById('commentsSection_' + postNumber).style.border = '4px #cccccc solid';
-    commentArray.unshift(obj); 
-    for(let i = 0; i < commentArray.length; i++) {
+    document.getElementById('commentsSection_' + postNumber).style.border = '4px #cccccc solid';    // Update style for somment section
+    commentArray.unshift(obj);                                                                      // Push the post objects in the array using 'unshift' method
+
+    for(let i = 0; i < commentArray.length; i++) {                                        // Iterate over the comments array
         if(postNumber === commentArray[i].commentId) {
-            let node = document.createElement("DIV");          
+        let node = document.createElement("DIV");                                         // Create node for the comment's     
             let textnode = document.createTextNode(commentArray[i].comments);   
             node.appendChild(textnode);                            
-            document.getElementById('commentsSection_' + postNumber).appendChild(node);
+            document.getElementById('commentsSection_' + postNumber).appendChild(node);   // Append the comment's
         }
     }
     document.getElementById('userComment_' + postNumber).value = '';
@@ -140,18 +144,18 @@ function addComment(commentId, postNumber) {
 // Edit feature's common model / function, for all the posts
 function handleEditEvent(flag) {
     let editAction = document.getElementById('editText_' + flag).innerHTML;
-    if(editAction === 'Edit') {
+    if(editAction === 'Edit') {                                                 // If user click's 'Edit' action, handle edit style and feature
         document.getElementById('editText_' + flag).innerHTML  = 'Save';
-        document.getElementById('postDesc_' + flag).contentEditable = true;
+        document.getElementById('postDesc_' + flag).contentEditable = true;     // Make the section editable on click
         document.getElementById('postTitle_' + flag).contentEditable = true;
         document.getElementById('editPostSection_' + flag).style.marginTop = '10px';
         document.getElementById('postDesc_' + flag).style.border = '1px solid #ff91af';
         document.getElementById('postDesc_' + flag).style.padding = '5px';
         document.getElementById('postTitle_' + flag).style.border = '1px solid #ff91af';
         document.getElementById('editIcon_' + flag).innerHTML = '<i class="fa fa-save"></i>';
-    }else {
-        document.getElementById('editText_' + flag).innerHTML  = 'Edit';
-        document.getElementById('postDesc_' + flag).contentEditable = false;
+    }else {                         
+        document.getElementById('editText_' + flag).innerHTML  = 'Edit';        // If user click's 'Save' action, handle save style and feature
+        document.getElementById('postDesc_' + flag).contentEditable = false;    // Make the section non-editable on click
         document.getElementById('postTitle_' + flag).contentEditable = false;
         document.getElementById('editPostSection_' + flag).style.marginTop = '0px';
         document.getElementById('postDesc_' + flag).style.border = 'none';
@@ -161,15 +165,15 @@ function handleEditEvent(flag) {
     }    
 }
 // Like feature's common model / function, for all the posts
-let likeDetailArray = [];
+let likeDetailArray = [];                               // Declare an empty array to contain the like feature details
 function handleLikeEvent(flag, count) { 
-    let likeDetailsObj = {};
+    let likeDetailsObj = {};                            // Construct Like detail's object
     likeDetailsObj.postId = flag;
     likeDetailsObj.likeCount = count;
-    likeDetailArray.push(likeDetailsObj);
-    for(let i = 0; i < likeDetailArray.length; i++) {
-        if(flag === likeDetailArray[i].postId) {
-            likeDetailsObj.likeCount = count++;
+    likeDetailArray.push(likeDetailsObj);               // Push the detailed objects in the array
+    for(let i = 0; i < likeDetailArray.length; i++) {   // Iterate over the objects to fetch the details
+        if(flag === likeDetailArray[i].postId) {        // Check for which post the 'like' button has been clicked, by comparing the selected post id with the recieved 'flag' argument
+            likeDetailsObj.likeCount = count++;         // Increase the like count for the particular post which has been liked
             document.getElementById('likeText_' + flag).innerHTML  = 'Liked';
             if(likeDetailArray[i].likeCount === 1) {
                 document.getElementById('likeCount_' + flag).innerHTML  = `${likeDetailArray[i].likeCount} person likes this!`;

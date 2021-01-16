@@ -1,20 +1,22 @@
-
-let removePostmodal = document.getElementById("delPostConfirm");
+let removePostmodal = document.getElementById("delPostConfirm");        // Capture the delete modal confirmation
 let selectedPost = '';
+// Remove post modal comfirmation function
 function removePostModal(flag) {
-    selectedPost = flag;
+    selectedPost = flag;                                                // Set the recieved selected post argument to the global variable
     document.getElementById("delPostConfirm").style.display = "block";  // Click event to open the delete post modal
 }
+// Click event on select of 'Yes' button on the Delete Modal
 document.getElementById('delPost').addEventListener('click', function() {
-    removePostHandler(selectedPost);
-    document.getElementById("delPostConfirm").style.display = "none";
+    removePostHandler(selectedPost);                                        // Invoke delete function for the selected post
+    document.getElementById("delPostConfirm").style.display = "none";       // Close the Modal after selecting 'Yes'
 });
+// Click event on select of 'No' button on the Delete Modal
 document.getElementById('cancelDel').addEventListener('click', function() {
-    selectedPost = '';
-    document.getElementById("delPostConfirm").style.display = "none";
+    selectedPost = '';                                                      // Set the variable back to it's initial value / Clearing the selected state
+    document.getElementById("delPostConfirm").style.display = "none";       // Close the Modal after selecting 'No'
 });
 
-// When the user clicks anywhere outside of the modal, close it
+// Clicks handler when clicked anywhere outside of the modal, by closing the modal
 window.onclick = function(event) {
   if (event.target == removePostmodal) {
     document.getElementById("delPostConfirm").style.display = "none";
@@ -39,7 +41,7 @@ function removePostHandler(flag) {
 // Route to respective post's
 function postHandler(flag) {
     if(flag === 'firstPost') {
-        window.location.href = '../html/post.html#postSection_1';
+        window.location.href = '../html/post.html#postSection_1';       // Jump's to the selected post section due to the anchor tag
     }else if(flag === 'secondPost') {
         window.location.href = '../html/post.html#postSection_2';
     }else if(flag === 'thirdPost') {
