@@ -63,14 +63,55 @@ textarea[name="userComment"] {
     font-size: 13px;
     color: #686868;
 }
+.postHeaderWidth {
+    width: 64%;
+}
+
+/* Media queries for screen size uptil width 1024px */
 @media only screen and (max-width: 1024px) {
     .postBtnWidth {
         width: 14%;
     }
-}
-@media only screen and (max-width: 1024px) {
     .fontSizeMedium {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 14px;
+    }
+    .postHeaderWidth {
+        width: 96%;
+    }
+    .postContainer {
+        margin: 1% auto;
+        width: 80%;
+    }
+    .commentsWrapper > div {
+        padding: 5px;
+        border: 2px #cccccc solid;
+        font-size: 14px;
+    }
+}
+/* Media queries for screen size uptil width 800px */
+@media only screen and (max-width: 800px) {
+    .postContainer {
+        margin: 3% auto;
+        width: 80%;
+    }
+    .postBtnWidth {
+        width: 18%;
+    }
+}
+/* Media queries for screen size uptil width 460px */
+@media only screen and (max-width: 460px) {
+    .postContainer {
+        margin: 5% auto;
+        width: 80%;
+    }
+    .postBtnWidth {
+        width: 30%;
+    }
+    .textAlignCenter > h5 {
+        font-size: 1.1rem;
+    }
+    .editActionWrapper > div:nth-child(1) {
+        font-size: 1.1rem;
     }
 }

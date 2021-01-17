@@ -26,8 +26,10 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
-.createPostBtn {
+.createPostBtnWidth {
     width: 20%;
+}
+.createPostBtn {
     background: #4CAF50;
     color: #ffffff;
     border: none;
@@ -45,13 +47,47 @@ input[name="createPostTitle"], textarea[name="createPostComment"] {
     width: 100%;
     padding-left: 45%;
 }
+
+/* Media queries for screen size uptil width 1024px */
 @media only screen and (max-width: 1024px) {
     .postWrapperWidth {
         width: 20%;
     }
+    .postActionWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: auto;
+        margin-top: 20%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
-@media only screen and (max-width: 360px) {
+/* Media queries for screen size uptil width 800px */
+@media only screen and (max-width: 800px) {
     .postWrapperWidth {
-        width: 60%;
+        width: 27%;
+    }
+    .createPostBtnWidth {
+        width: 28%;
+    }
+    .postActionWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: auto;
+        margin-top: 30%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+/* Media queries for screen size uptil width 460px */
+@media only screen and (max-width: 460px) {
+    .postWrapperWidth {
+        margin-top: 60%;
+        width: 56%;
+    }
+    .createPostBtnWidth {
+        width: 38%;
     }
 }

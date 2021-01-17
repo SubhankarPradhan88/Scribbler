@@ -21,7 +21,7 @@
 
     <body>
         <!-- TODO: Include code for header here -->
-        <header class="allPostsTheme width-64">
+        <header class="allPostsTheme allPostsheaderWidth">
             <div class="headerContainer">
                 <div class="logoWrapper">
                     <span class="allPostslogoText cursorPointer" onclick="homeRouteHandler()">Scribbler</span>
@@ -40,9 +40,9 @@
         <div class="contentWrapper">
             <div class="allPostsContainer">
                 <!-- post 1 starts here -->
-                <div class="postWrapper" id="firstPost">
+                <div class="postWrapperWidth postWrapper" id="firstPost">
                     <div>
-                        <p>Srishti Gupta</p>
+                        <p class="postAuthorFontStyle">Srishti Gupta</p>
                     </div>
                     <div>
                         <div class="inline postTitleColor">
@@ -52,8 +52,9 @@
                                 <i class="fa fa-trash"></i>
                             </span>
                         </div>
-                        <p>Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript.</p>
-                        <span class="rightAligned cursorPointer" onclick="postHandler('firstPost')">
+                        <p class="postText postDescFont">Since JavaScript does not have any type-checking, either of these keywords can be used to declare a 
+                            variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different.</p>
+                        <span class="ellipsisStyle cursorPointer" onclick="postHandler('firstPost')">
                             <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
                             <i class="fa fa-ellipsis-h"></i>
                         </span>
@@ -62,9 +63,9 @@
                 <!-- post 1 ends here -->
 
                 <!-- post 2 starts here -->
-                <div class="postWrapper" id="secondPost">
+                <div class="postWrapperWidth postWrapper" id="secondPost">
                     <div>
-                        <p>Colby Fayock</p>
+                        <p class="postAuthorFontStyle">Colby Fayock</p>
                     </div>
                     <div>
                         <div class="inline postTitleColor">
@@ -74,8 +75,9 @@
                                 <i class="fa fa-trash"></i>
                             </span>
                         </div>
-                        <p>One of the biggest challenges in software development is time. It’s something we can’t easily get more of, but linting can help us make the most</p>
-                        <span class="rightAligned cursorPointer" onclick="postHandler('secondPost')">
+                        <p class="postText postDescFont">One of the biggest challenges in software development is time. 
+                            It’s something we can’t easily get more of, but linting can help us make the most out of the time we have.</p>
+                        <span class="ellipsisStyle cursorPointer" onclick="postHandler('secondPost')">
                             <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
                             <i class="fa fa-ellipsis-h"></i>
                         </span>
@@ -84,9 +86,9 @@
                 <!-- post 2 ends here -->
 
                 <!-- post 3 starts here -->
-                <div class="postWrapper" id="thirdPost">
+                <div class="postWrapperWidth postWrapper" id="thirdPost">
                     <div>
-                        <p>Yazeed Bzadough</p>
+                        <p class="postAuthorFontStyle">Yazeed Bzadough</p>
                     </div>
                     <div>
                         <div class="inline postTitleColor">
@@ -96,8 +98,9 @@
                                 <i class="fa fa-trash"></i>
                             </span>
                         </div>
-                        <p>If you're a developer with a Twitter account, you've already seen everyone and their cat start a blog, YouTube channel, or Patreon.</p>
-                        <span class="rightAligned cursorPointer" onclick="postHandler('thirdPost')">
+                        <p class="postText postDescFont">If you're a developer with a Twitter account, you've already seen everyone and their cat start a blog, 
+                            YouTube channel, or Patreon. We all want to become stars, or at the very least, a recognizable name in the industry.</p>
+                        <span class="ellipsisStyle cursorPointer" onclick="postHandler('thirdPost')">
                             <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
                             <i class="fa fa-ellipsis-h"></i>
                         </span>
@@ -106,9 +109,9 @@
                 <!-- post 3 ends here -->
 
                 <!-- post 4 starts here -->
-                <div class="postWrapper" id="fourthPost">
+                <div class="postWrapperWidth postWrapper" id="fourthPost">
                     <div>
-                        <p>Cedd Burge</p>
+                        <p class="postAuthorFontStyle">Cedd Burge</p>
                     </div>
                     <div>
                         <div class="inline postTitleColor">
@@ -118,8 +121,11 @@
                                 <i class="fa fa-trash"></i>
                             </span>
                         </div>
-                        <p>When code is not describable using words, most people have to do some mental mapping to turn it in to words. This wastes mental energy, and you run</p>
-                        <span class="rightAligned cursorPointer" onclick="postHandler('fourthPost')">
+                        <p class="postText postDescFont">When code is not describable using words, most people have to do some mental mapping to turn it in to words. 
+                            This wastes mental energy, and you run the risk of getting the mapping wrong. Different people will map to different words, which leads to 
+                            confusion when discussing the code.
+                        </p>
+                        <span class="ellipsisStyle cursorPointer" onclick="postHandler('fourthPost')">
                             <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
                             <i class="fa fa-ellipsis-h"></i>
                         </span>
@@ -128,9 +134,9 @@
                 <!-- post 4 ends here -->
 
                 <!-- post 5 starts here -->
-                <div class="postWrapper" id="fifthPost">
+                <div class="postWrapperWidth postWrapper" id="fifthPost">
                     <div>
-                        <p>Srishti Gupta</p>
+                        <p class="postAuthorFontStyle">Srishti Gupta</p>
                     </div>
                     <div>
                         <div class="inline postTitleColor">
@@ -140,8 +146,10 @@
                                 <i class="fa fa-trash"></i>
                             </span>
                         </div>
-                        <p>Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this</p>
-                        <span class="rightAligned cursorPointer" onclick="postHandler('fifthPost')">
+                        <p class="postText postDescFont">Node.js treats each JavaScript file as a separate module. For instance, 
+                            if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, 
+                            and you can say that you’ve created a module named xyz.</p>
+                        <span class="ellipsisStyle cursorPointer" onclick="postHandler('fifthPost')">
                             <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
                             <i class="fa fa-ellipsis-h"></i>
                         </span>
