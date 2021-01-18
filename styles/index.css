@@ -80,6 +80,10 @@ input[name="createPostTitle"], textarea[name="createPostComment"] {
         margin-left: auto;
         margin-right: auto;
     }
+    .createPostfooter {
+        width: 100%;
+        padding-left: 41%;
+    }
 }
 /* Media queries for screen size uptil width 460px */
 @media only screen and (max-width: 460px) {
@@ -89,5 +93,9 @@ input[name="createPostTitle"], textarea[name="createPostComment"] {
     }
     .createPostBtnWidth {
         width: 38%;
+    }
+    .createPostfooter {
+        width: 100%;
+        padding-left: 38%;
     }
 }

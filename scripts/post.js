@@ -88,7 +88,7 @@ function loadAllPosts() {
             <div class="textAlignCenter" id="postTitle_${postsMasterArray[i].id}">
                 <h5>${postsMasterArray[i].title}</h5>
             </div>
-            <div class="editActionWrapper" id="editPostSection_${postsMasterArray[i].id}">
+            <div class="editActionWrapper authorSectionAlign" id="editPostSection_${postsMasterArray[i].id}">
                 <div>${postsMasterArray[i].author}</div>
                 <button class="postBtnWidth postBtnStyle" id="editPost_${postsMasterArray[i].id}" onclick="handleEditEvent(${postsMasterArray[i].id})">
                     <span id="editText_${postsMasterArray[i].id}">Edit</span> &nbsp; <span id="editIcon_${postsMasterArray[i].id}"><i class="fa fa-edit"></i></span>

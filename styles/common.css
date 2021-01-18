@@ -143,7 +143,9 @@ input[name="name"], input[name="userName"], input[name="userPassword"], input[na
 input[name="signInName"], input[name="signInPassword"] {
     background: #eeeeee;
 }
-
+.postCommentPadding {
+    padding-top: 2%;
+}
 /* Media queries for screen size uptil width 1024px */
 @media only screen and (max-width: 1024px) {
     .logoSubText {
@@ -167,6 +169,22 @@ input[name="signInName"], input[name="signInPassword"] {
     .commonHeaderWidth {
         width: 95%;
     }
+    .postCommentPadding {
+        padding-top: 5%;
+    }
 }
+/* Media queries for screen size uptil width 460px */
+@media only screen and (max-width: 460px) {
+    .modalPaddingTop {
+        padding-top: 15%;
+    }
+    .signInModalPadding {
+        padding-top: 20%;
+    }
+    .postCommentPadding {
+        padding-top: 15%;
+    }
+}
+
  
 
